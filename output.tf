@@ -66,3 +66,7 @@ output "kubeconfig_data" {
   value       = local.kubeconfig_data
   sensitive   = true
 }
+
+output "firewall_ids" {
+  value = [hcloud_firewall.k3s.id]
+}
